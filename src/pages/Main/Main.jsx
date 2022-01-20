@@ -21,35 +21,30 @@ const Main = () => {
   const [imagesData, setImagesData] = useState(null);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
-  const apiUrl = `${process.env.REACT_APP_API_URL}&page=${page}`;
 
   // Load images as soon as component loads
   useEffect(() => {
+    const loadImages = async () => {
+      setIsLoadingImages(true);
+      await axios
+        .get(`${process.env.REACT_APP_API_URL}&page=1`)
+        .then((response) => {
+          if (response.data.photos.length === 0) {
+            setError("Images not found!");
+            setIsLoadingImages(false);
+          } else {
+            setImagesData(response.data.photos);
+            setIsLoadingImages(false);
+          }
+        })
+        .catch((e) => {
+          setError(`Server error - ${e}`);
+          setIsLoadingImages(false);
+        });
+    };
+    // Fetches images from the API and updates the states
     loadImages();
   }, []);
-
-  /*
-   * Fetches images from the API and updates the states
-   */
-  const loadImages = async () => {
-    setIsLoadingImages(true);
-    await axios
-      .get(apiUrl)
-      .then((response) => {
-        if (response.data.photos.length === 0) {
-          setError("Images not found!");
-          setIsLoadingImages(false);
-        } else {
-          setImagesData(response.data.photos);
-          setPage(page + 1);
-          setIsLoadingImages(false);
-        }
-      })
-      .catch((e) => {
-        setError(`Server error - ${e}`);
-        setIsLoadingImages(false);
-      });
-  };
 
   /*
    * Fetches more images from the API and updates the states
@@ -57,7 +52,7 @@ const Main = () => {
   const loadMoreImages = async () => {
     setIsLoadingMoreImages(true);
     await axios
-      .get(apiUrl)
+      .get(`${process.env.REACT_APP_API_URL}&page=${page + 1}`)
       .then((response) => {
         if (response.data.photos.length === 0) {
           setError("End of results!");
