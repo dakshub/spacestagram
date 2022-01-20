@@ -6,7 +6,7 @@ A web application to like/unlike images from NASA's Images API. This is my submi
 
 - [React](https://reactjs.org/)
   - Libraries - [Shopify Polaris](https://www.npmjs.com/package/@shopify/polaris), [Polaris Icons](https://www.npmjs.com/package/@shopify/polaris-icons), [Axios](https://www.npmjs.com/package/axios), [Framer Motion](https://www.npmjs.com/package/framer-motion), [React Router](https://www.npmjs.com/package/react-router)
-- 
+-
 
 ## Features
 
