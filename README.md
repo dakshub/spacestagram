@@ -1,16 +1,16 @@
-# [Spacestagram](https://google.com/)
+# [Spacestagram](https://spacestagram-dakshub.vercel.app/)
 
-A web application to like/unlike images from NASA's Images API. This is my submission for Shopify's Frontend Developer Intern Challenge!
+A web application to like/unlike images from NASA's Images API. This is my submission for Shopify's Frontend Developer Intern Challenge. [Check it out!](https://spacestagram-dakshub.vercel.app/)
 
 ## Built with
 
 - [React](https://reactjs.org/)
   - Libraries - [Shopify Polaris](https://www.npmjs.com/package/@shopify/polaris), [Polaris Icons](https://www.npmjs.com/package/@shopify/polaris-icons), [Axios](https://www.npmjs.com/package/axios), [Framer Motion](https://www.npmjs.com/package/framer-motion), [React Router](https://www.npmjs.com/package/react-router)
--
+- [Vercel](https://vercel.com/)
 
 ## Features
 
-This application fulfills all the technical requirements, includes animations and 4 extra features.
+This application fulfills all the technical requirements, includes animations and 6 extra features.
 
 ### Main page
 
@@ -59,19 +59,15 @@ Ability to copy each image's URL.
 
 Using localStorage to save likes if the user leaves or reloads the page.
 
-### Like button animation
-
-### Responsive web design
-
-See it in the demo!
+In addition, the like action is animated and the application has Responsive web design!
 
 ## Run project locally
 
 1. Get a free API key from https://api.nasa.gov
-2. Clone this repository using `git clone`
-3. Create a `.env` file in the base directory and create a variable named `REACT_APP_API_URL=https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-30&api_key=key` where `key` is your `api_key` from step 1
+2. Clone this repository using `git clone https://github.com/dakshub/spacestagram.git`
+3. Create an `.env` file in the base directory and a variable named `REACT_APP_API_URL=https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-30&api_key=key` where `key` is your `api_key` from step 1
 4. Run `npm start` and the application should be available on `localhost:3000`
 
 ## Future enhancements
 
-I would start off by adding tests to make the code more robust. Filtering API results would be helpful. LocalStorage is not scalable, so I'll create a database and link it with backend service to store user likes.
+I would start off by adding tests to make the code more robust. Filtering API results and storing them to reduce API calls would be really helpful. LocalStorage is not scalable, so I'll create a database and link it with backend service to store user likes.
