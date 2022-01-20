@@ -1,6 +1,6 @@
 # [Spacestagram](https://spacestagram-dakshub.vercel.app/)
 
-A web application to like/unlike images from NASA's Images API. This is my submission for Shopify's Frontend Developer Intern Challenge. [Check it out!](https://spacestagram-dakshub.vercel.app/)
+A web application to like/unlike images from NASA's Image API. This is my submission for Shopify's Frontend Developer Intern Challenge. [Check it out!](https://spacestagram-dakshub.vercel.app/)
 
 ## Built with
 
