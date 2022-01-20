@@ -59,13 +59,13 @@ Ability to copy each image's URL.
 
 Using localStorage to save likes if the user leaves or reloads the page.
 
-In addition, the like action is animated and the application has Responsive web design!
+In addition, the like action is animated and the application has responsive web design!
 
 ## Run project locally
 
 1. Get a free API key from https://api.nasa.gov
 2. Clone this repository using `git clone https://github.com/dakshub/spacestagram.git`
-3. Create an `.env` file in the base directory and a variable named `REACT_APP_API_URL=https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-30&api_key=key` where `key` is your `api_key` from step 1
+3. Create an `.env` file in the base directory and a variable named `REACT_APP_API_URL=https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2022-1-1&api_key=key` where `key` is your `api_key` from step 1
 4. Run `npm start` and the application should be available on `localhost:3000`
 
 ## Future enhancements
