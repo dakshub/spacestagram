@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# [Spacestagram](https://google.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application to like/unlike images from NASA's Images API. This is my submission for Shopify's Frontend Developer Intern Challenge!
 
-## Available Scripts
+## Built with
 
-In the project directory, you can run:
+- [React](https://reactjs.org/)
+  - Libraries - [Shopify Polaris](https://www.npmjs.com/package/@shopify/polaris), [Polaris Icons](https://www.npmjs.com/package/@shopify/polaris-icons), [Axios](https://www.npmjs.com/package/axios), [Framer Motion](https://www.npmjs.com/package/framer-motion), [React Router](https://www.npmjs.com/package/react-router)
+- 
 
-### `yarn start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This application fulfills all the technical requirements, includes animations and 4 extra features.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Main page
 
-### `yarn test`
+Images returned from the API are shown here. Each image result lists a title, date of capture (earth_date) and a button to “like” that image.
+Each image can be “liked”, and a user is able to undo their “like”.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img width="600" alt="Main" src="https://user-images.githubusercontent.com/45903885/150244857-5c133ea2-a358-4f26-a0a6-ea992e8bd835.png">
 
-### `yarn build`
+### Accessibility
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+100% accessibility score on Lighthouse.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="433" alt="accessibility" src="https://user-images.githubusercontent.com/45903885/150245445-e282b94b-b47f-47de-989e-bf62f57c3b2f.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Extras
 
-### `yarn eject`
+### Home page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`Begin` button redirects user to `/images` where images from NASA's image API are shown.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="600" alt="Home" src="https://user-images.githubusercontent.com/45903885/150245489-79ed01bd-6922-43d2-914e-c2975788341c.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Loading state
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Skeleton page shown until images are fetched.
 
-## Learn More
+<img width="600" alt="loading state" src="https://user-images.githubusercontent.com/45903885/150245577-bac90485-72c3-4c06-b8bd-9b91476c33dc.png">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Load more images
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Ability to load more images from the API.
 
-### Code Splitting
+<img width="600" alt="load more funtion" src="https://user-images.githubusercontent.com/45903885/150245606-8115afa6-a90c-420f-b098-87657fa70076.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Shareable links
 
-### Analyzing the Bundle Size
+Ability to copy each image's URL.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width="600" alt="Shareable link" src="https://user-images.githubusercontent.com/45903885/150245673-d55fb137-360d-41d1-93f1-60c17c0302d6.png">
 
-### Making a Progressive Web App
+### Error handling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img width="600" alt="end of results" src="https://user-images.githubusercontent.com/45903885/150245765-e76e00b2-32be-4a02-be38-0130da6d44ab.png">
 
-### Advanced Configuration
+### Save likes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Using localStorage to save likes if the user leaves or reloads the page.
 
-### Deployment
+### Like button animation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Responsive web design
 
-### `yarn build` fails to minify
+See it in the demo!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Run project locally
+
+1. Get a free API key from https://api.nasa.gov
+2. Clone this repository using `git clone`
+3. Create a `.env` file in the base directory and create a variable named `REACT_APP_API_URL=https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-30&api_key=key` where `key` is your `api_key` from step 1
+4. Run `npm start` and the application should be available on `localhost:3000`
+
+## Future enhancements
+
+I would start off by adding tests to make the code more robust. Filtering API results would be helpful. LocalStorage is not scalable, so I'll create a database and link it with backend service to store user likes.
