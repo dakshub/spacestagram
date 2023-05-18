@@ -11,8 +11,6 @@ A web application to like/unlike images from NASA's Image API.
 
 ## Features
 
-This application fulfills all the technical requirements, includes animations and 6 extra features.
-
 ### Main page
 
 Images returned from the API are shown here. Each image result lists a title, date of capture (earth_date) and a button to “like” that image.
@@ -25,8 +23,6 @@ Each image can be “liked”, and a user is able to undo their “like”.
 100% accessibility score on Lighthouse.
 
 <img width="433" alt="accessibility" src="https://user-images.githubusercontent.com/45903885/150245445-e282b94b-b47f-47de-989e-bf62f57c3b2f.png">
-
-### Extras
 
 ### Home page
 
